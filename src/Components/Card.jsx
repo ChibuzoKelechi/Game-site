@@ -6,7 +6,6 @@ const ProductCard = ({name, price, stock, gadgetType, img}) => {
 
     const [cartNumber, setcartNumber] = useState(0);
     const buttonTest = () => {
-      // alert('You added this item to your cart!')
         setcartNumber(cartNumber + 1);
     }
  

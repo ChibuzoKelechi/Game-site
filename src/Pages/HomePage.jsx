@@ -17,6 +17,9 @@ const Home = () => {
                   <h1 className="text-2xl ">Welcome to</h1>
                   <h2 className="text-5xl py-2 font-semibold ">TechStore</h2>
                </div>
+               <div>
+                  <h3 className='font-bold'>The no. 1 gadget store in the country</h3>
+               </div>
                </article>
            </Hero>
            <StorePage/>

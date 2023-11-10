@@ -8,8 +8,10 @@ html{
 }
 
 .hero{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../public/Images/laptopstore.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../Images/riceddesktop.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 40vh;
+    height: 50vh;
 }
