@@ -1,7 +1,15 @@
 import gadgets  from "../DataFiles/Products";
 import ProductCard from "../Components/Card";
+import ShopCart from "../Components/ShopCart";
+import { useState } from "react";
 
 const StorePage = () => {
+    const [cart, setCart] = useState('');
+    
+
+    const showCart = () => {
+      setCart(!cart);
+    }
    
     const productItems = gadgets.map(gadget => {
      return <ProductCard
@@ -14,10 +22,23 @@ const StorePage = () => {
 
     return ( 
         <section>
-         <article></article>
+
+           <article className="w-full cart">
+
+            <button onClick={showCart}
+             className="font-bold text-xl m-2 w-24 bg-black text-white rounded-lg mx-auto">
+              Hide Cart
+            </button>
+            {/* <ShopCart/> */}
+            {cart && <ShopCart/>}
+            </article>
+         <article>
+          <h1 className="font-bold text-3xl p-2 text-center">Laptops</h1>
+         </article>
            <article className="flex flex-wrap justify-evenly">
              {productItems}
            </article>
+         
         </section>
      );
 }
