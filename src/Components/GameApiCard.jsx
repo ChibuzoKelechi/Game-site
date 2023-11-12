@@ -33,10 +33,10 @@ const GameCard = () => {
   
 
     return (
-        <section className="pt-5 gamecard">
+        <section className="pt-5 gamecard grid place-items-center">
            
 
-        <div className="w-96  mx-auto rounded-3xl p-4  
+        <div className="w-96 shadow-5xl mx-auto rounded-3xl p-4 hover:scale-2
           text-center g-card text-white">
                 <h1 className="text-3xl font-bold">  
                   {gameInfo}</h1>
@@ -49,9 +49,11 @@ const GameCard = () => {
                  className="w-72 rounded-xl mx-auto mt-2"/>
             </div>
 
-            <button onClick={getgame}
-             className="bg-white text-xl text-black  rounded-lg font-bold p-1 m-3 ml-64">
-             Game info </button>
+            <div className="grid place-items-center">
+                <button onClick={getgame}
+                className="bg-white text-xl text-black  rounded-lg font-bold p-1 m-3">
+                Game info </button>
+            </div>
 
         </section>
 

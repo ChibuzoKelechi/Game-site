@@ -11,20 +11,28 @@ html{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 40vh;
+    min-height: 30vh;
 }
 
 .hero{
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../Images/riceddesktop.jpg');
-    height: 50vh;
+    height: 40vh;
    
 }
 
 .gamecard{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.705),rgba(0,0,0,0.9) ), url('public/Images/gamecollage.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.37),rgba(0,0,0,0.9) ), url('public/Images/gamecollage.jpg');
 }
 
 .g-card{
     background-color: rgba(8, 8, 8, 0.726);
     margin-top: 4rem;
+}
+
+.gadgets{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.67),rgba(0,0,0,0.9) ), url('/Images/gamerig.jpg');
+    background-size: 130%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
