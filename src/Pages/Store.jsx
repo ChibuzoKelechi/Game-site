@@ -27,7 +27,7 @@ const StorePage = () => {
         <GameCard/>
       </article>
 
-      <article className="w-full cart">
+      {/* <article className="w-full cart mt-72">
         <button onClick={showCart}
           className="font-bold text-xl m-2 w-24 bg-black text-white rounded-lg mx-auto">
           Hide Cart
@@ -43,7 +43,7 @@ const StorePage = () => {
 
       <article className="flex flex-wrap justify-evenly">
         {productItems}
-      </article>
+      </article> */}
 
     </section>
   );

@@ -1,4 +1,4 @@
-import Axios  from "axios";
+import Axios from "axios";
 import { useEffect, useState } from "react";
 
 const GameCard = () => {
@@ -7,43 +7,55 @@ const GameCard = () => {
     const [category, setCategory] = useState('');
     const [thumbnail, setThumbnail] = useState('')
 
-    // const gamedata = Axios.get('https://www.freetogame.com/api/games').then((res) => { res.data });
-
     let random = Math.floor(Math.random() * 100)
 
-    const getgame = () => {
-        Axios.get('https://www.freetogame.com/api/games')
-        .then((res) => {
-            setGameInfo(res.data[random].title);
-            setgamePlatform(res.data[random].platform);
-            setCategory(res.data[random].genre);
-            setThumbnail(res.data[random].thumbnail);
-      });
-    }
-
     useEffect(() => {
-        Axios.get('https://www.freetogame.com/api/games')
-        .then((res) => {
-            setGameInfo(res.data[9].title);
-            setgamePlatform(res.data[9].platform);
-            setCategory(res.data[9].genre);
-        console.log(res.data)
-       });
+        Axios.get('https://www.freetogame.com/api/games?category=shooter')
+            .then((res) => {
+                setGameInfo(res.data[9].title);
+                setgamePlatform(res.data[9].platform);
+                setCategory(res.data[9].developer);
+                setThumbnail(res.data[9].thumbnail);
+                console.log(res.data)
+            });
     }, []);
 
-    return ( 
-        <section>
-         <button onClick={getgame} className="bg-black text-xl text-white rounded-md font-bold p-1 m-3 ">Game info</button>
+    const getgame = () => {
+        Axios.get('https://www.freetogame.com/api/filter?tag=shooter&platform=all')
+            .then((res) => {
+                setGameInfo(res.data[random].title);
+                setgamePlatform(res.data[random].platform);
+                setCategory(res.data[random].developer);
+                setThumbnail(res.data[random].thumbnail);
+            });
+    }
 
-         <div className="w-64 mx-auto rounded-md p-2 text-center bg-black text-white">
-            <h1 className="text-2xl font-bold">{gameInfo}</h1>
-            <h3 className="text-sm">{category}</h3>
-            <h3 className="text-sm">{gamePlatform}</h3>
-            <img src={thumbnail} alt="A game should be here sha" className="w-48 rounded-sm"/>
-         </div>
+  
+
+    return (
+        <section className="pt-5 gamecard">
+           
+
+        <div className="w-96  mx-auto rounded-3xl p-4  
+          text-center g-card text-white">
+                <h1 className="text-3xl font-bold">  
+                  {gameInfo}</h1>
+
+                <h3 className="">{category}</h3>
+                <h3 className=" font-bold p-1">{gamePlatform}</h3>
+
+                <img src={thumbnail} 
+                 alt="A game should be here sha"  
+                 className="w-72 rounded-xl mx-auto mt-2"/>
+            </div>
+
+            <button onClick={getgame}
+             className="bg-white text-xl text-black  rounded-lg font-bold p-1 m-3 ml-64">
+             Game info </button>
+
         </section>
 
-     );
+    );
 }
- 
+
 export default GameCard;

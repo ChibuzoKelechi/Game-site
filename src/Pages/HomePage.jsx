@@ -5,7 +5,7 @@ const Home = () => {
 
 
     return ( 
-        <section>
+        <section className='bg-black'>
          <header className="w-full">
             
          </header>
@@ -15,10 +15,10 @@ const Home = () => {
             <article className="welcome grid place-items-center">
                <div className="text-center text-4xl py-4">
                   <h1 className="text-2xl ">Welcome to</h1>
-                  <h2 className="text-5xl py-2 font-semibold ">TechStore</h2>
+                  <h2 className="text-5xl py-2 font-semibold ">GameArena</h2>
                </div>
                <div>
-                  <h3 className='font-bold'>The no. 1 gadget store in the country</h3>
+                  <h3 className='font-bold'>The no. 1 gaming store in the country</h3>
                </div>
                </article>
            </Hero>

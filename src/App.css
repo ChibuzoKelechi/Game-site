@@ -7,11 +7,24 @@ html{
     scroll-behavior: smooth;
 }
 
-.hero{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../Images/riceddesktop.jpg');
+.hero, .gamecard{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 40vh;
+}
+
+.hero{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../Images/riceddesktop.jpg');
     height: 50vh;
+   
+}
+
+.gamecard{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.705),rgba(0,0,0,0.9) ), url('public/Images/gamecollage.jpg');
+}
+
+.g-card{
+    background-color: rgba(8, 8, 8, 0.726);
+    margin-top: 4rem;
 }
