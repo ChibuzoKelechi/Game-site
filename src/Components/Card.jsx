@@ -13,9 +13,9 @@ const ProductCard = ({name, price, gadgetType, img, description}) => {
          <div className="px-6">
             <div className="flex flex-col justify-between h-4/6">
                <h1 className="font-bold text-2xl">{name}</h1>  
-               <h5 className="text-sm text-neutral-500 inline rounded-md font-bold">{gadgetType}</h5>
+               <h5 className=" text-neutral-300 inline rounded-md font-bold">{gadgetType}</h5>
                <h3 className="font-semibold text-2xl">₦{price}</h3>
-               <h4 className="text-sm">{description}</h4>
+               <h4 className="">{description}</h4>
                {/* {stock < 10 && <h4 className="text-md "> <span className="font-bold text-xl text-red-700">{stock} units left</span></h4>} */}
                
             </div>

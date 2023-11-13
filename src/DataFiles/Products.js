@@ -29,7 +29,7 @@ export default [
       {
         id: 3,
         item: 'XBox Series S(black)',
-        category: 'gaming console',
+        category: 'Gaming console',
         img:'/Images/xboxblack.webp',
         price:'525,000',
         stock: 7,

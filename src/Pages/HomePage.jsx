@@ -1,5 +1,6 @@
 import Hero from '../Components/Hero';
 import StorePage from './Store'
+import GameSlide from '../Components/GameSlide'
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
                </div>
                </article>
            </Hero>
+           <GameSlide/>
            <StorePage/>
 
          </main>
