@@ -1,6 +1,6 @@
 import Hero from '../Components/Hero';
-import StorePage from './Store'
 import GameSlide from '../Components/GameSlide'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -12,6 +12,10 @@ const Home = () => {
          </header>
 
          <main>
+           
+           <button className='p-1 bg-white text-black'>
+            <Link to='/store'> Start shopping</Link>
+           </button>
            <Hero>
             <article className="welcome grid place-items-center">
                <div className="text-center text-4xl py-4">
@@ -24,7 +28,7 @@ const Home = () => {
                </article>
            </Hero>
            <GameSlide/>
-           <StorePage/>
+           {/* <StorePage/> */}
 
          </main>
         </section>
