@@ -36,3 +36,11 @@ html{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+ form input{
+   color: black;
+   margin: 10px;
+   font-size: 1.5rem;
+   padding: 10px;
+   font-weight: 600;
+}

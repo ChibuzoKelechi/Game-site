@@ -6,6 +6,7 @@ import ErrorPage from './Pages/Error'
 import { createContext } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import GamerForm from './Components/GamerForm'
 export const AppContext = createContext()
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/store' element={<StorePage/>}/>
           <Route path='/game-info' element={<GameCard/>}/>
+          <Route path='/formpage' element={<GamerForm/>}/>
           <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       </Router>
