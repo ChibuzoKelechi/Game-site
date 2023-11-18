@@ -1,46 +1,55 @@
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-.hero, .gamecard{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 30vh;
+.hero,
+.gamecard {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh;
 }
 
-.hero{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9) ), url('../Images/riceddesktop.jpg');
-    height: 40vh;
-   
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url("../Images/riceddesktop.jpg");
+  height: 40vh;
 }
 
-.gamecard{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.37),rgba(0,0,0,0.9) ), url('public/Images/gamecollage.jpg');
+.gamecard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.9)),
+    url("public/Images/gamecollage.jpg");
 }
 
-.g-card{
-    background-color: rgba(8, 8, 8, 0.726);
-    margin-top: 4rem;
+.g-card {
+  background-color: rgba(8, 8, 8, 0.726);
+  margin-top: 4rem;
 }
 
-.gadgets{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.67),rgba(0,0,0,0.9) ), url('/Images/gamerig.jpg');
-    background-size: 130%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+.gadgets {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.9)),
+    url("/Images/gamerig.jpg");
+  background-size: 130%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
- form input{
-   color: black;
-   margin: 10px;
-   font-size: 1.5rem;
-   padding: 10px;
-   font-weight: 600;
+form input {
+  display: block;
+  color: black;
+  margin: 10px;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: 600;
+}
+
+form p {
+  color: rgb(252, 23, 23);
 }
