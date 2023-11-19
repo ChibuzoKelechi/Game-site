@@ -8,6 +8,7 @@ import { createContext } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import GamerForm from './Components/GamerForm'
+import Navbar from './Components/NavBar'
 export const AppContext = createContext()
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       }}>
         
         <Router>
-          <Routes>public/Images/mqdefaultcsgo.jpg
+          <Navbar/>
+          <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/store' element={<StorePage />} />
             <Route path='/game-info' element={<GameCard />} />
