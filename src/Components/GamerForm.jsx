@@ -1,11 +1,15 @@
+import { useContext } from "react";
+import {AppContext} from '../App'
 import { useForm } from "react-hook-form";
-import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from "react-router";
+import * as yup from 'yup';
 
 const GamerForm = () => {
-
+ 
+    // const [gamerProfile, setGamerProfile] = useState({});
     const teleport = useNavigate()
+    const { profile, setProfile } = useContext(AppContext);
 
     const schema = yup.object().shape({
         gamertag: yup.string().required('Gamer Tag not provided'),
@@ -21,11 +25,15 @@ const GamerForm = () => {
     const newGamer = (data, event) => {
         event.preventDefault();
         console.log(data)
+        setProfile(data)
         teleport('/gamer-profile')
     }
 
     return (
         <section className="bg-black h-screen text-black text-center formpage grid place-items-center">
+            <button onClick={() => console.log(profile)} className="bg-white">
+                Get data
+            </button>
             <form onSubmit={handleSubmit(newGamer)} className="form">
 
                 <input type="text"
@@ -47,6 +55,7 @@ const GamerForm = () => {
                      
                 <input type="submit" className="text-white font-bold"/>
             </form>
+
         </section>
 
        

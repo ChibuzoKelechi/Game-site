@@ -1,6 +1,6 @@
 const Navbar = () => {
     return ( 
-        <article>
+        <article className="w-full bg-black fixed top-0 z-10">
             
         </article>
      );

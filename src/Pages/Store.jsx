@@ -28,7 +28,8 @@ const StorePage = () => {
 
       <article className="gadgets">
         <h1 className="font-bold text-3xl p-2 text-center">
-          Gaming gadgets</h1>
+          Gaming gadgets
+        </h1>
 
         <Link to='/' className="">
           <FaHome />

@@ -9,7 +9,8 @@ html {
 }
 
 .hero,
-.gamecard {
+.gamecard, 
+.profile {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,3 +54,9 @@ form input {
 form p {
   color: rgb(252, 23, 23);
 }
+
+.profile{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.9)),
+    url("/Images/mqdefaultcsgo.jpg");
+}
+
