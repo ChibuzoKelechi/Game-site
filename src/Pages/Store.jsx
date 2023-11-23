@@ -24,7 +24,7 @@ const StorePage = () => {
   })
 
   return (
-    <section className="text-white bg-black">
+    <section className="text-white bg-black store">
 
       <article className="gadgets">
         <h1 className="font-bold text-3xl p-2 text-center">

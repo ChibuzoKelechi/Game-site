@@ -1,4 +1,4 @@
-import './App.css'
+import './assets/app.scss'
 import Home from './Pages/HomePage'
 import StorePage from './Pages/Store'
 import GameCard from './Components/GameApiCard'
