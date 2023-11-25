@@ -13,7 +13,7 @@ export const AppContext = createContext()
 
 function App() {
 
-  const [game, setGame] = useState('Counter Strike')
+  const [game, setGame] = useState('Gaming')
   const [profile, setProfile] = useState({})
 
   return (

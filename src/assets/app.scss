@@ -1,14 +1,7 @@
-* {
-  margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
-}
-
-.store{
-  scroll-padding-top: 36px 0 0 0;
+  margin: 0;
 }
 
 @font-face {
@@ -22,14 +15,14 @@ html {
 }
 
 
-@mixin background-settings{
+@mixin background-settings {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 30vh;
 }
 
-@mixin form_inputs{
+@mixin form_inputs {
   display: block;
   color: black;
   margin: 10px;
@@ -38,40 +31,41 @@ html {
   font-weight: 600;
 }
 
+
 $red: rgb(211, 3, 3);
-$dark-bg: rgba(8, 8, 8, 0.726); 
+$dark-bg: rgba(8, 8, 8, 0.726);
+$dark-gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(7, 7, 7, 0.9));
 
 
-.navbar{
+.navbar {
   background-color: $dark-bg;
 }
 
 .hero,
-.gamecard, 
+.gamecard,
 .profile,
-.middle {
+.community {
   @include background-settings();
 }
 
-.hero, .g-card{
+.hero,
+.g-card {
   font-family: fortnite;
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-  url('../Images/redditcsgo.webp');
-  height: 450px;
+  background-image: $dark-gradient, url('/Images/mqdefaultcsgo.jpg');
+  height: 100vh;
 }
 
-.middle{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9)),
-  url("/Images/codteam.jpg");
+.community {
+  background-image: $dark-gradient, url("/Images/codteam.jpg");
   height: 350px;
   font-family: fortnite;
 }
 
 .gamecard {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.9)),
+  background-image: $dark-gradient,
     url("public/Images/gamecollage.jpg");
 }
 
@@ -82,43 +76,43 @@ $dark-bg: rgba(8, 8, 8, 0.726);
 .gadgets {
   background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.9)),
     url("/Images/gamerig.jpg");
-  background-size: 130%;
-  // background-attachment: fixed;
   @include background-settings();
 }
 
-form input {
- @include form_inputs();
+form {
+  input {
+    @include form_inputs();
+  }
+
+  p {
+    color: $red;
+  }
+
 }
 
-form p {
-  color: $red;
-}
 
-.profile{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.9)),
+.profile {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.9)),
     url("/Images/mqdefaultcsgo.jpg");
 }
 
-
-
-.sidenav{
+.sidenav {
   height: 100%;
   transition: 2s;
   background-color: $dark-bg;
 
-  ul li{
+  ul li {
     padding: 1rem;
     font-weight: 600;
 
-        &:hover{
-            color: $red;
-            transition: all 0.2s;
-          } 
+    &:hover {
+      color: $red;
+      transition: all 0.2s;
+    }
   }
 }
 
-.xbutton{
+.xbutton {
   width: 39px;
   border-radius: 50%;
 }
