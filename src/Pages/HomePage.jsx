@@ -1,22 +1,15 @@
 /* eslint-disable react/prop-types */
 import Hero from '../Components/Hero';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { AppContext } from '../App';
 import { motion } from 'framer-motion';
 import logos from '/apex-platform-logos.svg'
-import { FaGooglePlay } from 'react-icons/fa6';
+import { FaGooglePlay, FaPersonMilitaryPointing, FaShopify } from 'react-icons/fa6';
 import communityIcon from '/Images/icon-gamehubs.svg'
 
 const Home = () => {
 
-   const { game } = useContext(AppContext);
-
    return (
       <section className='bg-black'>
-         <header className="w-full">
-
-         </header>
 
          <main className='pt-5'>
 
@@ -32,30 +25,55 @@ const Home = () => {
                </article>
             </Hero>
 
-            <MotionDiv>
-               <article className='community text-white center'>
-                  <div className='grid'>
-                     <img src={communityIcon} alt="people-group" className='mx-auto w-12 bg-black p-2 rounded-xl' />
-                     <h2 className='text-4xl font-bold my-3 p-3'>Meet your fellow gamers</h2>
-                     <button className='p-1 bg-white text-black hover:text-red-900 text-xl font-sans font-bold'>
-                        <Link to='/formpage'> Join the {game} community </Link>
-                     </button>
-                  </div>
-               </article>
-            </MotionDiv>
+            <section className='home-section-container flex flex-col justify-evenly'>
+               <MotionDiv>
+                  <article className='community mb-20 text-white center overflow-hidden'>
+                     <div className='grid'>
+                        <img src={communityIcon} alt="people-group" className='mx-auto w-12 bg-black p-2 rounded-xl' />
+                        <h2 className='text-4xl font-bold my-3 p-3'>Meet your fellow gamers</h2>
+                        <button className='link-button w-1/3 p-2'>
+                           <Link to='/community'> Connect </Link>
+                        </button>
+                     </div>
+                  </article>
+               </MotionDiv>
 
-            <MotionDiv>
-               <article className='see-games text-white center text-center '>
-                  <div className='grid'>
-                     {/* <img src={communityIcon} alt="people-group" className='mx-auto w-12 bg-black p-2 rounded-xl' /> */}
-                     <FaGooglePlay style={{margin: 'auto', fontSize: '50px'}}/>
-                     <h2 className='text-2xl font-bold my-3 p-3'>View and download top trending games</h2>
-                     <button className='w-1/2 mx-auto bg-white text-black hover:text-red-900 text-xl font-sans font-bold'>
-                        <Link to='/games'> Go to showcase </Link>
-                     </button>
-                  </div>
-               </article>
-            </MotionDiv>
+               <MotionDiv>
+                  <article className='see-games text-white center m-5'>
+                     <div className='grid'>
+                        <FaGooglePlay style={{ margin: 'auto', fontSize: '50px' }} />
+                        <h2 className='text-2xl font-bold my-3 p-3'>View and download top trending games</h2>
+                        <button className='link-button'>
+                           <Link to='/games'> Go to showcase </Link>
+                        </button>
+                     </div>
+                  </article>
+               </MotionDiv>
+
+               <MotionDiv className=''>
+                  <article className='store-link text-white center m-5'>
+                     <div className='grid'>
+                        <FaShopify style={{ margin: 'auto', fontSize: '50px' }} />
+                        <h2 className='text-2xl font-bold my-3 p-3'>Buy new games and gadgets</h2>
+                        <button className='link-button'>
+                           <Link to='/store'> Start Shopping </Link>
+                        </button>
+                     </div>
+                  </article>
+               </MotionDiv>
+
+               <MotionDiv className=''>
+                  <article className='store-link text-white center m-5'>
+                     <div className='grid'>
+                        <FaPersonMilitaryPointing style={{ margin: 'auto', fontSize: '50px' }} />
+                        <h2 className='text-2xl font-bold my-3 p-3'>Join the force today</h2>
+                        <button className='link-button'>
+                           <Link to='/formpage'> Sign Up </Link>
+                        </button>
+                     </div>
+                  </article>
+               </MotionDiv>
+            </section>
 
 
          </main>
@@ -66,9 +84,9 @@ const Home = () => {
 export default Home;
 
 
-function MotionDiv({children}) {
+function MotionDiv({ children }) {
    return (
-      <motion.article>
+      <motion.article className='home-section first:mb-20'>
          {children}
       </motion.article>
    );

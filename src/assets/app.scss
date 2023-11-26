@@ -35,6 +35,7 @@ html {
 $red: rgb(211, 3, 3);
 $dark-bg: rgba(8, 8, 8, 0.726);
 $dark-gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(7, 7, 7, 0.9));
+$darker-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 
 
 .navbar {
@@ -44,7 +45,9 @@ $dark-gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(7, 7, 7, 0.9));
 .hero,
 .gamecard,
 .profile,
-.community {
+.community,
+.errorpage,
+.home-section-container {
   @include background-settings();
 }
 
@@ -115,4 +118,17 @@ form {
 .xbutton {
   width: 39px;
   border-radius: 50%;
+}
+
+.errorpage{
+  min-height: 100vh;
+  background-image: $dark-gradient, url('/Images/minecraftspawning.gif');
+}
+
+.home-section-container{
+  background-image: $dark-gradient, url('/Images/asus-rog-ambient-lighting-red.jpg');
+}
+
+.home-section{
+  background-image: $darker-gradient;
 }
