@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import logos from '/apex-platform-logos.svg'
 import { FaGooglePlay, FaPersonMilitaryPointing, FaShopify } from 'react-icons/fa6';
 import communityIcon from '/Images/icon-gamehubs.svg'
-import Footer from '../Components/Footer';
 
 const Home = () => {
 
@@ -78,10 +77,6 @@ const Home = () => {
 
 
          </main>
-
-         <footer>
-            <Footer/>
-         </footer>
       </section>
    );
 }

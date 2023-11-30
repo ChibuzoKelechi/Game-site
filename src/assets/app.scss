@@ -33,6 +33,7 @@ html {
 
 
 $red: rgb(211, 3, 3);
+$darkred: rgb(87, 1, 1);
 $dark-bg: rgba(8, 8, 8, 0.726);
 $dark-gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(7, 7, 7, 0.9));
 $darker-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
@@ -138,7 +139,8 @@ icon-hover{
   transform: translateY(2px);
 }
 
-footer{
+.footer{
+  border-top: 1px solid $darkred;
   article{
     a:hover{
       transition: all 0.1s;

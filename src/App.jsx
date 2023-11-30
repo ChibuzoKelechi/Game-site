@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import GamerForm from './Components/GamerForm'
 import Navbar from './Components/NavBar'
+import Footer from './Components/Footer'
 export const AppContext = createContext()
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path='/community' element={<CommunityPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
+          <Footer/>
         </Router>
       </AppContext.Provider>
     </section>

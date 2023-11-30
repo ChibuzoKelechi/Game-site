@@ -2,9 +2,6 @@ import gadgets from "../DataFiles/Products";
 import ProductCard from "../Components/Card";
 import { useContext, useState } from "react";
 import { AppContext } from "../App";
-import { FaHome } from 'react-icons/fa'
-import { Link } from "react-router-dom";
-
 
 
 const StorePage = () => {
@@ -24,17 +21,16 @@ const StorePage = () => {
   })
 
   return (
-    <section className="text-white bg-black store">
+    <section className="text-white bg-black store py-10">
 
       <article className="gadgets">
         <h1 className="font-bold text-3xl p-2 text-center">
           Gaming gadgets
         </h1>
 
-        <Link to='/' className="">
-          <FaHome />
-        </Link>
-
+        <article className="flex flex-wrap">
+          {productItems}
+        </article>
 
         <div>
           <input type="text"
@@ -52,9 +48,6 @@ const StorePage = () => {
           </button>
         </div>
 
-        <article className="flex flex-wrap">
-          {productItems}
-        </article>
       </article>
 
     </section>
