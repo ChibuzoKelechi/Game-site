@@ -1,4 +1,4 @@
-export default [
+const gadgets = [
   {
     id: 0,
     item: "ASUS TUF F15",
@@ -17,16 +17,6 @@ export default [
     stock: 3,
     spec: "23.8 100Hz FHD Gaming monitor",
   },
-  // {
-  //   item: 'ASUS ROG Strix G15',
-  //   category: 'Gaming Laptop',
-  //   img:'/Images/asusrogstrox.webp',
-  //   price:'495,000',
-  //   stock: 17,
-  //   spec: 'AMD Ryzen 7, NVIDIA RTX-3050, 512GB SSD'
-
-  //  '
-  // },
   {
     id: 3,
     item: "XBox Series S(black)",
@@ -64,3 +54,6 @@ export default [
     spec: "Intel core i7, NVIDIA RTX-4050, 512GB SSD",
   },
 ];
+
+
+export default gadgets

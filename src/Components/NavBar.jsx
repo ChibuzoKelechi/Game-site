@@ -31,7 +31,7 @@ function Sidenav() {
     }
     
     return ( 
-        <article className="sidenav fixed right-0 top-0 h-screen text-lg z-10 transition-all"  
+        <article className="sidenav fixed right-0 top-0 h-screen w-0 text-lg z-10 transition-all"  
          id="sidenav">
             <h1 className="m-3 p-2 border xbutton font-bold cursor-pointer">
                 <FaX onClick={closeNav} style={{fontSize: '20px'}} className="font-extrabold"/>

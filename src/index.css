@@ -13,6 +13,12 @@
         @apply min-h-0 h-72 p-2 py-5
     }
     .link-button{
-        @apply min-w-[36px] p-1 rounded w-1/3 mx-auto bg-white text-black hover:text-red-900 text-xl font-sans font-bold
+        @apply min-w-[36px] p-2 rounded-lg w-1/2 mx-auto bg-white text-black hover:text-red-900 text-xl font-sans font-bold
+    }
+    .footer{
+        @apply w-full bg-black text-white mt-5
+    }
+    .contacts{
+        @apply flex justify-evenly lg:justify-center
     }
 }
